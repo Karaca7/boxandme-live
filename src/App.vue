@@ -3,6 +3,9 @@
   <div id="powt"></div>
   <div class="me" id="me" ref="myme"></div>
   <button @keydown="keybordcatcher($event)" clas="btn">start</button>
+  <div class="kumtorbası"></div>
+  <div class="beko"></div>
+  <div class="bam" ref="bambam"><img src="./assets/bam33.png" /></div>
 </template>
 
 <script>
@@ -17,6 +20,8 @@ export default {
   methods: {
     keybordcatcher(e) {
       let me = this.$refs.myme;
+      let mybam = this.$refs.bambam;
+      console.log(this.position);
 
       if (this.play == false) {
         this.play = true;
@@ -42,6 +47,16 @@ export default {
       if (e.keyCode == "69") {
         console.log(69);
         Ben.punchR(me);
+      }
+      if (this.position == 900) {
+        console.log("his");
+        setTimeout(() => {
+          mybam.style = `opacity:1;`;
+        }, 150);
+
+        setTimeout(() => {
+          mybam.style = `opacity:0;`;
+        }, 2500);
       }
     },
   },
@@ -154,5 +169,33 @@ body {
   font-size: 200px;
   position: absolute;
   left: 50%;
+}
+
+.kumtorbası {
+  background-image: url(./assets/kumtorbası.png);
+  position: absolute;
+  z-index: -1;
+  width: 300px;
+  height: 550px;
+  top: 100px;
+  left: 1200px;
+  background-repeat: no-repeat;
+}
+.beko {
+  background-image: url(./assets/bekotra.png);
+
+  z-index: -1;
+  position: absolute;
+  width: 250px;
+  height: 550px;
+  background-repeat: no-repeat;
+  top: 320px;
+  left: 1270px;
+}
+.bam {
+  position: absolute;
+  opacity: 0;
+  top: 420px;
+  left: 1250px;
 }
 </style>
