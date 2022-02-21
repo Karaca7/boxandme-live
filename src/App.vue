@@ -1,8 +1,8 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <div id="powt"></div>
+
   <div class="me" id="me" ref="myme"></div>
-  <button @keydown="keybordcatcher($event)" clas="btn">start</button>
+  <button @keydown="keybordcatcher($event)" class="btn">start</button>
   <div class="kumtorbası" ref="torba"></div>
   <div class="beko"></div>
   <div class="bam" ref="bambam"><img src="./assets/bam33.png" /></div>
@@ -86,6 +86,9 @@ body {
   background-image: url(./assets/ring3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+.btn {
+  z-index: 1;
 }
 .me {
   background-size: contain;
@@ -181,10 +184,14 @@ body {
   .me3 {
     top: 40%;
   }
+  .btn {
+    z-index: 1;
+  }
+  .bam {
+    top: 40%;
+  }
 }
-.bam {
-  top: 40%;
-}
+
 @media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
   .me {
     opacity: 0;
@@ -206,6 +213,9 @@ body {
   }
   .beko {
     opacity: 0;
+  }
+  .btn {
+    z-index: 1;
   }
 }
 </style>
