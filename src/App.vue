@@ -2,6 +2,9 @@
   <img alt="Vue logo" src="./assets/logo.png" />
 
   <div class="me" id="me" ref="myme"></div>
+  <div class="info">
+    Left punch : Q <br />Rigth punch :E <br />For walk standard game keys
+  </div>
   <button @keydown="keybordcatcher($event)" class="btn">start</button>
   <div class="kumtorbası" ref="torba"></div>
   <div class="beko"></div>
@@ -78,6 +81,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.info {
+  top: 10%;
+  left: 13%;
+  position: absolute;
+  color: white;
 }
 .textt {
   opacity: 0;
