@@ -3,7 +3,12 @@
 
   <div class="me" id="me" ref="myme"></div>
   <div class="info">
-    Left punch : Q <br />Rigth punch :E <br />For walk standard game keys
+    For playing:
+    <br />
+    1) Click the Start button.
+    <br />
+    2) Left punch : Q <br />3) Rigth punch :E <br />
+    4) For walk standard game keys
   </div>
   <button @keydown="keybordcatcher($event)" class="btn">start</button>
   <div class="kumtorbası" ref="torba"></div>
